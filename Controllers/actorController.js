@@ -16,7 +16,7 @@ const getActors = asyncHandler(async (req, res) => {
 //@POST
 const addActor = asyncHandler(async (req, res) => {
     const {name,gender,dateOfBirth,bio,movies} = req.body
-    if(!name || !gender || !dateOfBirth){
+    if(!name || !gender || !dateOfBirth || !movies){
         res.status(400)
         throw new Error('Name, gender and DOB is mandatory!')
     } 
