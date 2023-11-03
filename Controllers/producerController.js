@@ -3,11 +3,19 @@ const Producer = require('../Models/producerModel')
 const Movie = require('../Models/movieModel')
 const actorModel = require('../Models/actorModel')
 
+
+//Add a new producer
+//PUBLIC 
+//@GET
 const getProducers= asyncHandler (async (req,res)=>{
     const producers=await Producer.find()
     res.status(200).send(producers)
 })
 
+
+//Add a new producer
+//PRIVATE   
+//@POST
 const addProducer= asyncHandler(async(req,res)=>{
     const {name,gender,dateOfBirth,bio,movies} = req.body
     if(!name || !gender || !dateOfBirth){
@@ -36,6 +44,10 @@ const addProducer= asyncHandler(async(req,res)=>{
     console.log("New Producer added!")
 })
 
+
+//Update a producer
+//PRIVATE   
+//@PUT
 const updateProducer = asyncHandler(async(req,res)=>{
     const producer = await Producer.findById(req.params.id)
     const {name,gender,dateOfBirth,bio,movies}=req.body

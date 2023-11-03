@@ -2,11 +2,18 @@ const asyncHandler = require('express-async-handler')
 const Actor = require('../Models/actorModel')
 const Movie = require('../Models/movieModel')
 
+//Get all the actors
+//PUBLIC
+//@GET
 const getActors = asyncHandler(async (req, res) => {
     const actors = await Actor.find()
     res.json(actors)
 })
 
+
+//Add a new actor
+//PRIVATE   
+//@POST
 const addActor = asyncHandler(async (req, res) => {
     const {name,gender,dateOfBirth,bio,movies} = req.body
     if(!name || !gender || !dateOfBirth){
@@ -31,6 +38,10 @@ const addActor = asyncHandler(async (req, res) => {
     console.log("New Actor added!")
 })
 
+
+//Update an existing actor
+//PRIVATE   
+//@PUT
 const updateActor = asyncHandler(async(req,res)=>{
     const actor = await Actor.findById(req.params.id)
     const { name, gender, dateOfBirth, bio,movies } = req.body

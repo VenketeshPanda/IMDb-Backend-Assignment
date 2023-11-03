@@ -61,7 +61,9 @@ const addMovie = asyncHandler(async (req, res) => {
 })
 
 
-//Update an existing movie
+//update an existing movie
+//PRIVATE   
+//@PUT
 const updateMovie = asyncHandler(async (req, res) => {
     const { name, yearOfRelease, plot, poster, actorNames, producerName } = req.body
     const movieId = req.params.id

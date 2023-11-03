@@ -4,7 +4,9 @@ const User = require('../Models/userModel')
 const jwt = require('jsonwebtoken')
 const errorHandler = require('../Middlewares/errorHandler')
 
-
+//Add a new user
+//PUBLIC
+//@POST
 const registerUser = asyncHandler(async (req, res) => {
     const { username, email, password } = req.body
     if (!username || !email || !password) {
@@ -30,6 +32,9 @@ const registerUser = asyncHandler(async (req, res) => {
 })
 
 
+//Login an user
+//PUBLIC 
+//@POST
 const loginUser = asyncHandler(async (req, res) => {
     const { email, password } = req.body
     if (!email || !password) {
