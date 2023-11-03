@@ -10,7 +10,7 @@
 
 -> Updating a movie: Update the details of an existing movie.  
 
--> If a new movie is created along with some existing actors and producers, then that movie comes under that actor's and producer's document. 
+-> If a new movie is created along with some existing actors and producers, then that movie comes under that actor's and producer's document. And if there is a new actor or producer, that also gets added respectively in their documents.
 
 -> Similarly if a movie is updated and if an actor is added or removed, it updates the actor's details as well. Same for producer.
 
@@ -50,7 +50,7 @@
   
   -> Any one can access the GET routes to fetch and see all the movies, actors and producer details.
   
-  -> But only a authenticated use can make any changes/add any items to the list. So that any one who is not authorized doesn't make any unnecessary changes to our data.
+  -> But only a authenticated user can make any changes/add any items to the list. So that any one who is not authorized doesn't make any unnecessary changes to our data.
   
   -> A new user can register with username, email and password.
   
@@ -66,7 +66,7 @@
 
   -> Every time a new user registers, they have to give an unique username which is not present in the database. 
   
-  -> The email also has to be unique so that a single user cannot access the routes with different usernames.
+  -> The email also has to be unique so that a single user cannot access the application with different usernames.
   
   -> Everytime a new movie is created, it is mandatory to have all the fields including actors and producer.
   
