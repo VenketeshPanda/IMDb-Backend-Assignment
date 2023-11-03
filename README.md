@@ -118,3 +118,23 @@
   -> "jsonwebtoken": "^9.0.2", Used to generate JWT and for token based authentication
   
   -> "mongoose": "^7.6.4", Used for mongodb 
+
+
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+  **File Structure**
+
+  -> Config: This folder has the configuration settings of the database connection.
+  
+  -> Constants: This folder has all the details about the constants I have used in the application. (Error status codes)
+  
+  -> Controllers: This folder contains all the controllers(movie,actor,producer and user). All the functionalities of the routes have been defined here.
+  
+  -> Middlewares: I have used some custom middlewares in my application which I have defined here. 
+
+  -> Models: All the database schemas are defined here.
+  
+  -> Routes: All the routes are defined here.
+  
+  -> index.js: This is the entry point for my NodeJs application.
